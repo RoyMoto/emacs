@@ -231,9 +231,9 @@
 
 
 ;;multi-termの設定
-(when (require 'multi-term nil t)
-  ;;使用するシェルを指定
-  (setq multi-term-program "/bin/bash"))
+;; (when (require 'multi-term nil t)
+;;   ;;使用するシェルを指定
+;;   (setq multi-term-program "/bin/bash"))
 
 
 (global-set-key "\C-h" 'delete-backward-char)
@@ -323,7 +323,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-gtags volatile-highlights helm-projectile helm w3m tabbar quickrun python-mode neotree multi-term mozc markdown-mode jedi git-gutter flycheck-pos-tip flycheck-popup-tip clang-format))))
+    (helm-gtags volatile-highlights helm-projectile helm w3m tabbar quickrun python-mode neotree mozc markdown-mode jedi git-gutter clang-format))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -333,9 +333,9 @@
 
 
 ;;  ;;; helmの設定
-;; (require 'helm-config)
-;; (helm-mode 1)
-;; ;;(helm-migemo-mode 1)
+(require 'helm-config)
+(helm-mode 1)
+(helm-migemo-mode 1)
 
 ;; ;; C-hで前の文字削除
 ;; (define-key helm-map (kbd "C-h") 'delete-backward-char)
@@ -349,10 +349,10 @@
 ;; ;;(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
 ;; ;; キーバインド
-;; (global-set-key (kbd "C-c h") 'helm-mini)
-;; (global-set-key (kbd "<f10>") 'helm-mini)
-;; (define-key global-map (kbd "C-x b")   'helm-buffers-list)
-;; ;;(define-key global-map (kbd "C-x b") 'helm-for-files)
-;; (define-key global-map (kbd "C-x C-f") 'helm-find-files)
-;; (define-key global-map (kbd "M-x")     'helm-M-x)
-;; (define-key global-map (kbd "M-y")     'helm-show-kill-ring)
+(global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "<f10>") 'helm-mini)
+(define-key global-map (kbd "C-x b")   'helm-buffers-list)
+(define-key global-map (kbd "C-x b") 'helm-for-files)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(define-key global-map (kbd "M-x")     'helm-M-x)
+(define-key global-map (kbd "M-y")     'helm-show-kill-ring)
